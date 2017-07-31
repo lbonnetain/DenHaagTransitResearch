@@ -54,7 +54,7 @@ for iRoute = 1 : nRoutes %go through each route
          eps = 0.0005; % error uncertainity for matching the coordonate between 
                        % shape file and StopList
                        
-         %---  find idFrom in shape ---%
+         %---  find idFrom in shape file ---%
          idFrom = [StopList.id] == Route(jLink);
          Network(iV_n).From_Stop_name = StopList(idFrom).name;
          coord_From_Stop = [ StopList(idFrom).Y  StopList(idFrom).X ];
@@ -77,8 +77,7 @@ for iRoute = 1 : nRoutes %go through each route
              end
          end
          
-         
-         %---  find idTo in shape ---%
+         %---  find idTo in shape file---%
          idStop = [StopList.id]==Route(jLink+1) ;
          Network(iV_n).To_Stop_name = StopList(idStop).name;
          coord_To_Stop = [ StopList(idStop).Y  StopList(idStop).X ];

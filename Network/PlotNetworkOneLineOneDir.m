@@ -13,7 +13,7 @@ function [  ] = PlotNetworkOneLineOneDir(Network, line, dir )
 %--------------------------------------------------------------------------
 % Last updated by Bonnetain Loic, 2017/07/28
 
-%%code
+%% code
 
 idV_n = find(strcmp({Network.Routes},line)==1 & [Network.dir]==dir);
 Nlink = length(idV_n);
